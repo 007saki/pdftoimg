@@ -1,3 +1,6 @@
+
+
+
 'use client'
 import React, { useState, useRef } from 'react';
 import * as Progress from '@radix-ui/react-progress';
@@ -5,6 +8,7 @@ import * as Toast from '@radix-ui/react-toast';
 import { Button } from '@radix-ui/themes';
 
 const PdfToImage = () => {
+
   const [file, setFile] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -72,8 +76,8 @@ const PdfToImage = () => {
       setImages(data.images || []);
       setSuccess(true);
       setOpenToast(true);
-    } catch (err: any) {
-      setError(err.message || 'Something went wrong.');
+    } catch {
+      setError('Something went wrong.');
       setOpenToast(true);
     } finally {
       setLoading(false);
@@ -191,4 +195,4 @@ const PdfToImage = () => {
   );
 };
 
-export default PdfToImage;
+export default PdfToImage
