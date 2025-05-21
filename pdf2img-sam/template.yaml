@@ -1,0 +1,27 @@
+
+
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: PDF to Image Converter Lambda
+
+Resources:
+  PdfToImageFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: app.lambda_handler
+      Runtime: python3.11
+      CodeUri: lambda/
+      MemorySize: 1024
+      Timeout: 60
+      Environment:
+        Variables:
+          OUTPUT_BUCKET: youtubev2
+      Policies:
+        - S3WritePolicy:
+            BucketName: youtubev2
+      Events:
+        Api:
+          Type: Api
+          Properties:
+            Path: /convert
+            Method: post
