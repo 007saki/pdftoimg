@@ -1,6 +1,3 @@
-
-
-
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "@radix-ui/themes/styles.css";
@@ -18,15 +15,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PDF to Image Converter – Fast, Free & Secure",
-  description: "Convert PDF files to high-quality images instantly. Free, secure, and easy-to-use online PDF to image converter.",
-  metadataBase: new URL("https:/www.suggeelson.com"),
+  title: "PDF to Image Converter – Fast, Free & Secure | PDF to Image Online",
+  description: "PDF to Image: Convert PDF files to high-quality images instantly. Free, secure, and easy-to-use online PDF to image converter. Best tool to convert PDF to PNG or JPG.",
+  metadataBase: new URL("https://www.suggeelson.com"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "PDF to Image Converter – Fast, Free & Secure",
-    description: "Convert PDF files to high-quality images instantly. Free, secure, and easy-to-use online PDF to image converter.",
+    title: "PDF to Image Converter – Fast, Free & Secure | PDF to Image Online",
+    description: "PDF to Image: Convert PDF files to high-quality images instantly. Free, secure, and easy-to-use online PDF to image converter. Best tool to convert PDF to PNG or JPG.",
     url: "https://www.suggeelson.com",
     siteName: "PDF to Image Converter",
     images: [
@@ -40,7 +37,6 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
-  
   robots: {
     index: true,
     follow: true,
